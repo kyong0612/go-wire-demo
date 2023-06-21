@@ -1,4 +1,5 @@
 # go-wire-demo
 
-see:
-https://github.com/google/wire/blob/main/_tutorial/README.md
+## References
+- https://github.com/google/wire/blob/main/_tutorial/README.md
+- https://github.com/google/wire/blob/main/docs/guide.md
