@@ -4,7 +4,7 @@
 //go:build !wireinject
 // +build !wireinject
 
-package foobar
+package interfacebind
 
 // Injectors from wire.go:
 

@@ -1,4 +1,4 @@
-package foobar
+package interfacebind
 
 import "github.com/google/wire"
 
@@ -24,7 +24,7 @@ func providerBar(f Fooer) Bar {
 	return Bar(f.Foo())
 }
 
-var InterfaceSet = wire.NewSet(
+var Set = wire.NewSet(
 	providerMyFooer,
 	wire.Bind(new(Fooer), new(*MyFooer)),
 	providerBar,
