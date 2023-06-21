@@ -12,9 +12,12 @@ import (
 
 // Injectors from wire.go:
 
-func InitializeEvent() model.Event {
+func InitializeEvent() (model.Event, error) {
 	message := model.NewMessage()
 	greeter := model.NewGreeter(message)
-	event := model.NewEvent(greeter)
-	return event
+	event, err := model.NewEvent(greeter)
+	if err != nil {
+		return model.Event{}, err
+	}
+	return event, nil
 }

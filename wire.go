@@ -8,7 +8,7 @@ import (
 	"github.com/kyong0612/go-wire-demo/model"
 )
 
-func InitializeEvent() model.Event {
+func InitializeEvent() (model.Event, error) {
 	wire.Build(model.NewEvent, model.NewGreeter, model.NewMessage)
-	return model.Event{}
+	return model.Event{}, nil
 }
